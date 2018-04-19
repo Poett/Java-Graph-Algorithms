@@ -416,7 +416,7 @@ public class Graph {
 				toReturn = toReturn.trim().substring(0, toReturn.length() - 2);
 				toReturn = toReturn + ")\n";
 			}
-			else {toReturn = toReturn + v + "[NULL]\n";}
+			else {toReturn = toReturn + v + "[]\n";}
 		}
 		return toReturn;
 	}

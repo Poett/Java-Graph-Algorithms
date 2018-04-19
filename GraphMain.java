@@ -14,11 +14,12 @@ public class GraphMain {
 		Graph G2;
 		
 		
-		System.out.println(G);
 
 		long start = System.currentTimeMillis();
 		G2 = G.getBellManFordGraph(G.getVertex(a));
 		long time = System.currentTimeMillis() - start;
+		System.out.println(G2);
+		System.out.println();
 		System.out.println("Bellman-Ford's runtime (miliseconds): " + time);
 		
 
