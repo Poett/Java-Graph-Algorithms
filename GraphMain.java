@@ -11,11 +11,23 @@ public class GraphMain {
 		String b = "Oak Tree Apt";
 		
 		Graph G = l.getGraph();
+		Graph G2;
 		
 		
 		System.out.println(G);
-		System.out.println(G.getBellManFordGraph(G.getVertex(a)));
-		System.out.println(G.getDijkstraGraph(G.getVertex(a)));
+
+		long start = System.currentTimeMillis();
+		G2 = G.getBellManFordGraph(G.getVertex(a));
+		long time = System.currentTimeMillis() - start;
+		System.out.println("Bellman-Ford's runtime (miliseconds): " + time);
+		
+
+		start = System.currentTimeMillis();
+		G2 = G.getDijkstraGraph(G.getVertex(a));
+		time = System.currentTimeMillis() - start;
+		System.out.println("Dijkstra's runtime (miliseconds): " + time);
+		
+		System.out.println();
 		
 		
 		Stack<Vertex> BFpath = G.getShortestPath(G.getVertex(a), G.getVertex(b), Graph.BELLMANFORD);
